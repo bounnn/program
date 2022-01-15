@@ -5,7 +5,8 @@
         if(x[i] == x[i+1]) {
             continue;
         }
-        newX[i] = x[i];
+        // newX[i] = x[i];
+        newX.push(x[i])
     }
     let result = newX.join("");
     console.log(result);

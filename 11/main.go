@@ -22,5 +22,8 @@ func findNumber(num int) {
 	}
 }
 func main() {
-	findNumber(1317919)
+	var n int
+	fmt.Print("Input number: ")
+	fmt.Scanln(&n)
+	findNumber(n)
 }
