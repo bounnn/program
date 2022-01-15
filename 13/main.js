@@ -1,6 +1,6 @@
 let myArray = [];
-//fuction sarng object kep khr moun nuk suek sa
-function info(id, name, English, Math, Physic) {
+//this is constructure
+function InfoStudent(id, name, English, Math, Physic) {
   this.id = id;
   this.name = name;
   this.score = {
@@ -36,13 +36,13 @@ function grade(score) {
   }
 }
 //fuction sum lup teacher user
-function TeacherUser() {
+function teacherUser() {
   let ID = prompt(`Input student ID: `);
   let sName = prompt(`Input Name and Surename student:`);
   let english = prompt(`input score of English:`);
   let math = prompt(`input score of Math:`);
   let physic = prompt(`input score of Physic:`);
-  let result = new info(
+  let result = new InfoStudent(
     ID,
     sName,
     parseInt(english),
@@ -52,7 +52,7 @@ function TeacherUser() {
   myArray.push(result);
 }
 //fucrion sum lup student user
-function StudentUser() {
+function studentUser() {
   let fromStudent = prompt(`Input your ID student:`);
   for (let i = 0; i < myArray.length; i++) {
     if (fromStudent === myArray[i].id) {
